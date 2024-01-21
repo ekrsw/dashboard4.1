@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="cp932">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>KPI速報-TVS-</title>
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div class="title">
+                <h1>KPI速報-TVS-</h1>
+        	<div class="time_stamp">$formatten_datetime</div>
+            </div>
+            <div class="time_container">
+                <div class="time_box">
+                    <div class="time_label">現在の時刻</div>
+                    <div class="time" id="current-time">00:00:00</div>
+                </div>
+                <div class="time_box">
+                    <div class="time_label">20分前の時刻</div>
+                    <div class="time" id="twenty-minutes-ago">00:00:00</div>
+                </div>
+                <div class="time_box">
+                    <div class="time_label">40分前の時刻</div>
+                    <div class="time" id="forty-minutes-ago">00:00:00</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="mini_box">
+                <div class="label">ACW</div>
+                <div class="main_contents">$acw</div>
+            </div>
+            <div class="mini_box">
+                <div class="label">CPH</div>
+                <div class="main_contents">$cph</div>
+            </div>
+            <div class="mini_box">
+                <div class="label">電話問い合わせ件数</div>
+                <div class="main_contents">$total_phone_inquiries 件</div>
+            </div>
+            <div class="mini_box">
+                <div class="label">応答率</div>
+                <div class="contents">
+                    <div class="ratio">$response_ratio %</div>
+                    <div class="counts">$response / $response_den</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="label">直受け率</div>
+                <div class="contents">
+                    <div class="ratio">$direct_ratio %</div>
+                    <div class="counts">$direct_calls / $direct_den</div>
+                    <div class="buffer_label">Buffer: <span class="buffer">$direct_buffer</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">20分以内折返し率</div>
+                <div class="contents">
+                    <div class="ratio">$callback_ratio_20min %</div>
+                    <div class="counts">$callback_counts_20min / $callback_den_20min ($wfc_20over)</div>
+                    <div class="buffer_label">Buffer: <span class="buffer">$callback_20min_buffer</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">30分以内折返し率</div>
+                <div class="contents">
+                    <div class="ratio">$callback_ratio_30min %</div>
+                    <div class="counts">$callback_counts_30min / $callback_den_30min ($wfc_30over)</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">40分以内折返し率</div>
+                <div class="contents">
+                    <div class="ratio">$callback_ratio_40min %</div>
+                    <div class="counts">$callback_counts_40min / $callback_den_40min ($wfc_40over)</div>
+                    <div class="buffer_label">Buffer: <span class="buffer">$callback_40min_buffer</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="notes">
+            <p>○ CPHは暫定値です。</p>
+            <p>○ データは1分ごとに更新されます。</p>
+            <p>○ ()の数字は滞留分が時間経過した件数です。</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

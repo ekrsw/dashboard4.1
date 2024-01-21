@@ -1,0 +1,105 @@
+body {
+    width: 850px;
+    height: 600px;
+    font-family: "Meyrio";
+    background: linear-gradient(-20deg, rgb(154, 171, 176), rgb(50, 70, 103));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1, .title {
+    height: 50px;
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+}
+.info {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+.time_stamp {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+h1, p, .info, .time_stamp {
+    color: #FFFFFF;
+}
+.container, .header_container, .time_container {
+    display: flex;
+}
+.header_container {
+    height: 75px;
+    justify-content: space-between;
+}
+.box {
+    height: 122px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.mini_box {
+    height: 95px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.box, .mini_box {
+    width: 180px;
+}
+.box, .mini_box {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.time_box {
+    width: 100px;
+    height: 65px;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.time_label {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.label {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+    color: #193A95;
+}
+.main_contents, .time, .ratio, .counts, .buffer_label {
+    text-align: center;
+}
+.buffer_label {
+    font-size: 16px;
+    margin: 2px;
+}
+.main_contents {
+    font-size: 25px;
+    margin: 10px 10px 10px;
+    padding: 0px;
+}
+.time {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    color: #FFFFFF;
+}
+.ratio {
+    font-size: 28px;
+}
+p, .time_stamp {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+.negative {
+    color: red;
+}
+
+.positive {
+    color: green;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="cp932">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_to_monitor.css">
+    <title>KPI速報 -TVS-</title>
+</head>
+<body>
+    <header>
+        <div class="title"><h1>KPI速報-TVS-</h1></div>
+        <div class="last-data-acquisition-date">
+            <p>$formatten_datetime</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <div class="label">ACW</div>
+                <div class="contents">$dep_acw</div>
+            </div>
+            <div class="box">
+                <div class="label">CPH</div>
+                <div class="contents">$dep_cph</div>
+            </div>
+            <div class="box">
+                <div class="label">応答率</div>
+                <div class="contents">$response_ratio %</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="label">直受け率</div>
+                <div class="contents">$direct_ratio %</div>
+            </div>
+            <div class="box">
+                <div class="label">20分以内率</div>
+                <div class="contents">$callback_ratio_20min %</div>
+            </div>
+            <div class="box">
+                <div class="label">40分以内率</div>
+                <div class="contents">$callback_ratio_40min %</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="notes">
+            <p>○CPHは暫定値です。</p>
+            <p>○データは1分ごとに更新されます。</p>
+        </div>
+    </footer>
+</body>
+</html>
