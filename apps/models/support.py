@@ -29,6 +29,8 @@ class Support(object):
         df = df[(df['顛末コード'] != 'ﾒｰﾙ・FAX回答（送信）')]
         df = df[(df['顛末コード'] != 'SRB投稿（要望）')]
         df = df[(df['顛末コード'] != 'ﾒｰﾙ・FAX文書（受信）')]
+        # Excelの集計ではなぜか対象外になるため追加。含める場合はコメントアウト
+        df = df[(df['顛末コード'] != '対応待ち') & (df['顛末コード'] != '対応中')]
         self.df_ivr_base = df
     
     def create_df_direct_by_group(self, from_date, to_date, group):
@@ -42,6 +44,7 @@ class Support(object):
         df = self.df_ivr_base.copy()
         df = self._filtered_by_date_range(df, from_date, to_date)
         self.df_ivr = df[(df['サポート区分'] == group)]
+        self.df_ivr.to_excel('ivr.xlsx')
 
     def _filtered_by_date_range(self, df, from_date, to_date):
         # from_dateからto_dateの範囲のデータを抽出
