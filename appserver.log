@@ -6,3 +6,4 @@ INFO:numexpr.utils:NumExpr defaulting to 8 threads.
 WARNING:selenium.webdriver.common.selenium_manager:There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: tcp connect error: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。 (os error 10060)); using driver found in the cache
 ERROR:apps.models.reporter:group is not correct.
 ERROR:apps.models.reporter:group is not correct.
+WARNING:selenium.webdriver.common.selenium_manager:There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: proxy authentication required); using driver found in the cache

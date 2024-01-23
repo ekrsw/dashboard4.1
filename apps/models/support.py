@@ -44,7 +44,6 @@ class Support(object):
         df = self.df_ivr_base.copy()
         df = self._filtered_by_date_range(df, from_date, to_date)
         self.df_ivr = df[(df['サポート区分'] == group)]
-        self.df_ivr.to_excel('ivr.xlsx')
 
     def _filtered_by_date_range(self, df, from_date, to_date):
         # from_dateからto_dateの範囲のデータを抽出
