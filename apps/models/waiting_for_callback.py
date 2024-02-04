@@ -78,6 +78,7 @@ class WaitingForCallback(object):
         c_30over = df_30over.shape[0]
         c_40over = df_40over.shape[0]
         c_60over = df_60over.shape[0]
+        # df_20over.to_excel('20over.xlsx', index=False)
 
         return c_20over, c_30over, c_40over, c_60over
 
